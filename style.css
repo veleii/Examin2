@@ -1,0 +1,139 @@
+body {
+    background-image: linear-gradient(to left, #190B23 , #121845);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.background {
+    display: none;
+}
+header {
+   grid-column: 11/12;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 3px;
+    font-family: 'Secular One';
+    font-size: 2.5em; 
+    font-weight: 200;
+    margin-bottom: 0%;
+}
+
+h2 {
+    font-family: 'Lora';
+    letter-spacing: 5px;
+    color: rgba(255, 208, 41, 1);
+    justify-self: flex-end;
+    font-size: 1em; 
+    font-weight: 200; 
+    margin-top: 0%;
+}
+
+.planets {
+    margin-left: 8rem;
+    margin-right: 3rem;
+    grid-column: 1/13;
+    grid-row: 2/5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sun {
+    background-color: rgba(255, 208, 41, 1);
+    border-radius: 999rem;
+    width: 40rem;
+    height: 40rem;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    left: -35rem;
+    position: absolute;
+}
+
+.mercury {
+    background-color: rgba(136, 136, 136, 1);
+    border-radius: 999rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    grid-column: 2/3;
+    gap: 1em;
+}
+
+ .venus {
+    background-color: rgba(231, 205, 205, 1);
+    border-radius: 999rem;
+    width: 1rem;
+    height: 1rem;
+    grid-column: 3/4;
+    gap: 1em;
+}
+
+.earth {
+    background-color: rgba(66, 142, 212, 1);
+    border-radius: 999rem;
+    width: 1rem;
+    height: 1rem;
+    grid-column: 4/5;
+    gap: 1em;
+}
+
+.mars {
+    background-color: rgba(239, 95, 95, 1);
+    border-radius: 999rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    grid-column: 5/6;
+    gap: 1em;
+}
+
+.jupiter {
+    background-color: rgba(226, 148, 104, 1);
+    border-radius: 999rem;
+    width: 5rem;
+    height: 5rem;
+    grid-column: 6/7;
+    gap: 1em;
+}
+
+.line {
+    width: 5rem;
+    height: .5rem;
+    top: 40%;
+    left: -35%;
+    transform: translateY(-50%)rotate(-30deg);
+    border-bottom: 1px solid rgba(240, 237, 237, 0.462);
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    grid-column: 7/8;
+}
+
+.saturn {
+    background-color: rgba(199, 170, 114, 1);
+    border-radius: 999rem;
+    width: 3rem;
+    height: 3rem;
+    grid-column: 7/8;
+    gap: 1em;
+    position: relative;
+}
+
+.uranus {
+    background-color: rgba(201, 212, 241, 1);
+    border-radius: 999rem;
+    width: 2rem;
+    height: 2rem;
+    grid-column: 8/9;
+    gap: 1em;
+}
+
+.neptune {
+    background-color: rgba(122, 212, 241, 1);
+    border-radius: 999rem;
+    width: 2rem;
+    height: 2rem;
+    grid-column: 9/10;
+    gap: 1em;
+} 
+
