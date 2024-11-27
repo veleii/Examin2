@@ -6,7 +6,6 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    display: none;
 }
 
 header {
@@ -33,8 +32,8 @@ h2 {
 }
 
 .planets {
-    margin-left: 8rem;
-    margin-right: 3rem;
+    margin-left: 10rem;
+    margin-right: 5rem;
     grid-column: 1/13;
     grid-row: 2/5;
     display: flex;
@@ -45,126 +44,396 @@ h2 {
 .sun {
     background-color: rgba(255, 208, 41, 1);
     border-radius: 999rem;
-    width: 40rem;
-    height: 40rem;
+    width: 45rem;
+    height: 45rem;
     grid-column: 1/2;
     grid-row: 2/3;
-    left: -35rem;
+    left: -38rem;
     position: absolute;
+    line-height: 63px;
+    transition: .5s;
 }
+
+.sun::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #FFD029;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+.sun:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #FFD029;
+  }
+  
+.sun:hover {
+    color: #FFD029;
+    box-shadow: 0 0 5px #FFD029;
+    text-shadow: 0 0 5px #FFD029;
+  }
 
 .mercury {
     background-color: rgba(136, 136, 136, 1);
     border-radius: 999rem;
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 1rem;
+    height: 1rem;
     grid-column: 2/3;
     gap: 1em;
+    position: relative;
+    line-height: 63px;
+    transition: .5s;
 }
+.mercury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #888888;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+.mercury:hover::before {
+    transform: scale(3.1);
+    box-shadow: 0 0 15px #888888;
+  }
+  
+.mercury:hover {
+    color: #888888;
+    box-shadow: 0 0 5px #888888;
+    text-shadow: 0 0 5px #888888;
+  }
 
  .venus {
     background-color: rgba(231, 205, 205, 1);
     border-radius: 999rem;
-    width: 1rem;
-    height: 1rem;
+    width: 2rem;
+    height: 2rem;
     grid-column: 3/4;
     gap: 1em;
+    position: relative;
+    line-height: 63px;
+    transition: .5s;
 }
+.venus::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #E7CDCD;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+.venus:hover::before {
+    transform: scale(3.1);
+    box-shadow: 0 0 15px #E7CDCD;
+  }
+  
+.venus:hover {
+    color: #E7CDCD;
+    box-shadow: 0 0 5px #E7CDCD;
+    text-shadow: 0 0 5px #E7CDCD;
+  }
 
 .earth {
     background-color: rgba(66, 142, 212, 1);
     border-radius: 999rem;
-    width: 1rem;
-    height: 1rem;
+    width: 2rem;
+    height: 2rem;
     grid-column: 4/5;
     gap: 1em;
+    position: relative;
+    line-height: 63px;
+    transition: .5s;
 }
+.earth::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #428ED4;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+.earth:hover::before {
+    transform: scale(2.1);
+    box-shadow: 0 0 15px #428ED4;
+  }
+  
+.earth:hover {
+    color: #428ED4;
+    box-shadow: 0 0 5px #428ED4;
+    text-shadow: 0 0 5px #428ED4;
+  }
 
 .mars {
     background-color: rgba(239, 95, 95, 1);
     border-radius: 999rem;
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 1rem;
+    height: 1rem;
     grid-column: 5/6;
     gap: 1em;
+    position: relative;
+    line-height: 63px;
+    transition: .5s;
+}
+
+.mars::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #EF5F5F;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+.mars:hover::before {
+    transform: scale(3.1);
+    box-shadow: 0 0 15px #EF5F5F;
+}
+  
+.mars:hover {
+    color: #C9D4F1;
+    box-shadow: 0 0 5px #EF5F5F;
+    text-shadow: 0 0 5px #EF5F5F;
 }
 
 .jupiter {
     background-color: rgba(226, 148, 104, 1);
     border-radius: 999rem;
-    width: 5rem;
-    height: 5rem;
+    width: 10rem;
+    height: 10rem;
     grid-column: 6/7;
     gap: 1em;
+    position: relative;
+    line-height: 63px;
+    transition: .5s;
+}
+
+.jupiter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #E29468;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+  
+.jupiter:hover::before {
+    transform: scale(2.1);
+    box-shadow: 0 0 15px #E29468;
+}
+  
+.jupiter:hover {
+    color: #E29468;
+    box-shadow: 0 0 5px #E29468;
+    text-shadow: 0 0 5px #E29468;
 }
 
 .line {
-    width: 5rem;
-    height: .5rem;
-    top: 40%;
-    left: -35%;
+    width: 10rem;
+    height: .9rem;
+    top: 50%;
+    left: -50%;
     transform: translateY(-50%)rotate(-30deg);
-    border-bottom: 1px solid rgba(240, 237, 237, 0.462);
     position: absolute;
     justify-self: center;
     align-self: center;
     grid-column: 7/8;
+    line-height: 63px;
+    transition: .5s;
+}
+
+.line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #C7AA72;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+  
+.line:hover::before {
+    transform: scale(2.1);
+    box-shadow: 0 0 15px #C7AA72;
+}
+  
+.line:hover {
+    color: #C9D4F1;
+    box-shadow: 0 0 5px #C7AA72;
+    text-shadow: 0 0 5px #C7AA72;
 }
 
 .saturn {
     background-color: rgba(199, 170, 114, 1);
     border-radius: 999rem;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     grid-column: 7/8;
     gap: 1em;
     position: relative;
+    line-height: 63px;
+    transition: .5s;
+}
+.saturn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #C7AA72;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+  
+.saturn:hover::before {
+    transform: scale(2.1);
+    box-shadow: 0 0 15px #C7AA72;
+}
+  
+.saturn:hover {
+    color: #C9D4F1;
+    box-shadow: 0 0 5px #C7AA72;
+    text-shadow: 0 0 5px #C7AA72;
 }
 
 .uranus {
     background-color: rgba(201, 212, 241, 1);
     border-radius: 999rem;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     grid-column: 8/9;
     gap: 1em;
+    position: relative; 
+    line-height: 63px;
+    transition: .5s;
 }
 
-.neptune {
-    background-color: rgba(122, 212, 241, 1);
-    border-radius: 999rem;
-    width: 2rem;
-    height: 2rem;
-    grid-column: 9/10;
-    gap: 1em;
-} 
-
-
-
-.info-page {
-    position: relative; /* Säkerställer att det skapar ett nytt lagerkontext */
-    z-index: 1; 
-    display: flex;
-    flex-direction: column;
-   
-}
-
-.background {
-    position: absolute; /* Placera bilden absolut i förhållande till föräldern */
+.uranus::before {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Placera under all annan content */
+    border-radius: 50%;
+    background: #C9D4F1;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+  
+.uranus:hover::before {
+    transform: scale(3.1);
+    box-shadow: 0 0 15px #C9D4F1;
+}
+  
+.uranus:hover {
+    color: #C9D4F1;
+    box-shadow: 0 0 5px #C9D4F1;
+    text-shadow: 0 0 5px #C9D4F1;
+}
+
+.neptune {
+    position: relative; 
+    transition: .5s;
+    background-color: rgba(122, 212, 241, 1);
+    border-radius: 999rem;
+    width: 3rem;
+    height: 3rem;
+    grid-column: 9/10;
+    gap: 1em;
+} 
+
+.neptune::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #7AD4F1;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+  
+.neptune:hover::before {
+    transform: scale(3.1);
+    box-shadow: 0 0 15px #7AD4F1;
+}
+  
+.neptune:hover {
+    color: #7AD4F1;
+    box-shadow: 0 0 5px #7AD4F1;
+    text-shadow: 0 0 5px #7AD4F1;
+}
+
+.info-page {
+    position: relative; 
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    display: none;
+   
+}
+
+.background {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: none;
 }
 
 img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Säkerställer att bilden täcker hela ytan snyggt */
+    object-fit: cover;
 }
 
-.earth {
+.earth1 {
     background-color: rgba(66, 142, 212, 1);
     border-radius: 999rem;
     width: 40rem;
@@ -173,6 +442,7 @@ img {
     grid-row: 2/3;
     left: -35rem;
     position: absolute;
+    display: none;
     
 }
 .earth2 {
