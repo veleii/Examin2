@@ -71,8 +71,10 @@ const handlePlanetClick = async (planetName) => {
             document.querySelector('.info-page').style.display = 'block';
             document.querySelector('.background').style.display = 'block';
             document.querySelector('.earth1').style.display = 'block';
-        
             document.querySelector('.start-page').style.display = 'none'; 
+
+            displayInfo(selectedPlanet)
+
         } else {
             console.error('Planet not found');
         }
@@ -92,24 +94,19 @@ function returnToStartPage() {
     document.querySelector('.background').style.display = 'none';
 }
 
-
-
 const displayInfo = (bodyInfo) => {
-    // Uppdatera planetens namn och latin
-    document.querySelector('.').textContent = bodyInfo.name;
-    document.querySelector('.').textContent = bodyInfo.latinName;
+    
+    document.querySelector('.name').textContent = bodyInfo.name;
+    document.querySelector('.latinName').textContent = bodyInfo.latinName;
+    document.querySelector('.artInfo').textContent = bodyInfo.desc;
+    document.querySelector('.circumference').textContent = `${bodyInfo.circumference} km`;
+    document.querySelector('.fromSun').textContent = `${bodyInfo.distance} km`;
+    document.querySelector('.maxTemp').textContent = `${bodyInfo.temp.day}°C`;
+    document.querySelector('.minTemp').textContent = `${bodyInfo.temp.night}°C`;
 
-    // Uppdatera beskrivning av planeten
-    document.querySelector('.').textContent = bodyInfo.desc;
-
-    // Uppdatera omkrets
-    document.querySelector('').textContent = `${bodyInfo.circumference} km`;
-
-    // Uppdatera avstånd från solen
-    document.querySelector('').textContent = `${bodyInfo.distance} km`;
-
-    // Uppdatera temperaturer
-    document.querySelector('.').textContent = `${bodyInfo.temp.day}°C`;
-    document.querySelector('.').textContent = `${bodyInfo.temp.night}°C`;
+    if (bodyInfo.moons.length === 0) {
+        document.querySelector('.moons').textContent = `Denna planet har inga månar`
+    } else { document.querySelector('.moons').textContent = `${bodyInfo.moons}`
+    }
 }
  
