@@ -8,7 +8,6 @@ const uranus = document.querySelector(".uranus")
 const neptune = document.querySelector(".neptune")
 const sun = document.querySelector(".sun")
 
-
 mercury.addEventListener('click', () => handlePlanetClick('Merkurius'));
 venus.addEventListener('click', () => handlePlanetClick('Venus'));
 earth.addEventListener('click', () => handlePlanetClick('Jorden'));
@@ -96,17 +95,18 @@ function returnToStartPage() {
 
 const displayInfo = (bodyInfo) => {
     
-    document.querySelector('.name').textContent = bodyInfo.name;
-    document.querySelector('.latinName').textContent = bodyInfo.latinName;
+    document.querySelector('.name').textContent = bodyInfo.name.toUpperCase();
+    document.querySelector('.latinName').textContent = bodyInfo.latinName.toUpperCase();
     document.querySelector('.artInfo').textContent = bodyInfo.desc;
-    document.querySelector('.circumference').textContent = `${bodyInfo.circumference} km`;
-    document.querySelector('.fromSun').textContent = `${bodyInfo.distance} km`;
+    document.querySelector('.circumference').textContent = `${bodyInfo.circumference.toLocaleString()} Km`;
+    document.querySelector('.fromSun').textContent = `${bodyInfo.distance.toLocaleString()} Km`;
     document.querySelector('.maxTemp').textContent = `${bodyInfo.temp.day}°C`;
     document.querySelector('.minTemp').textContent = `${bodyInfo.temp.night}°C`;
 
     if (bodyInfo.moons.length === 0) {
-        document.querySelector('.moons').textContent = `Denna planet har inga månar`
-    } else { document.querySelector('.moons').textContent = `${bodyInfo.moons}`
+        document.querySelector('.moons').textContent = `Denna planet har inga månar.`;
+    } else { 
+        document.querySelector('.moons').textContent = bodyInfo.moons.join(", ");
     }
 }
- 
+
