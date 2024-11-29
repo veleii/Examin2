@@ -1,3 +1,4 @@
+/*main script*/
 import { elements } from "./elements.js";
 import { getKey, getPlanets} from "./api.js";
 
@@ -9,7 +10,6 @@ const handlePlanetClick = async (planetName) => {
 
         if (selectedPlanet) {
             console.log(selectedPlanet);
-            
             elements.infoPage.style.display = 'block';
             elements.background.style.display = 'block';
             elements.earth1.style.display = 'block';
@@ -37,7 +37,6 @@ const returnToStartPage = () => {
 }
 
 const displayInfo = (bodyInfo) => {
-    
     elements.name.textContent = bodyInfo.name.toUpperCase();
     elements.latinName.textContent = bodyInfo.latinName.toUpperCase();
     elements.artInfo.textContent = bodyInfo.desc;

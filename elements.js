@@ -1,3 +1,4 @@
+/*my elements*/
 export const elements = { 
 mercury: document.querySelector(".mercury"),
 venus: document.querySelector(".venus"),
@@ -26,5 +27,4 @@ maxTemp: document.querySelector('.maxTemp'),
 minTemp: document.querySelector('.minTemp'),
 
 moons: document.querySelector('.moons')
-
 }
