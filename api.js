@@ -17,7 +17,7 @@ export const getKey = async (endpoint) => {
     }
 }
 
- export const getPlanets = async (endpoint, key) => {
+export const getPlanets = async (endpoint, key) => {
     const url = 'https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com' + endpoint
 
     const options = {

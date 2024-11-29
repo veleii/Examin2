@@ -2,11 +2,12 @@ body {
     background-image: linear-gradient(to left, #190B23 , #121845);
 }
 
+/* Page one */
+
 .start-page {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, 1fr);
-   /*  display: none; */
 }
 
 header {
@@ -66,18 +67,18 @@ h2 {
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
-  }
+}
   
 .sun:hover::before {
     transform: scale(1.1);
     box-shadow: 0 0 15px #FFD029;
-  }
+}
   
 .sun:hover {
     color: #FFD029;
     box-shadow: 0 0 5px #FFD029;
     text-shadow: 0 0 5px #FFD029;
-  }
+}
 
 .mercury {
     background-color: rgba(136, 136, 136, 1);
@@ -90,6 +91,7 @@ h2 {
     line-height: 63px;
     transition: .5s;
 }
+
 .mercury::before {
     content: '';
     position: absolute;
@@ -102,18 +104,18 @@ h2 {
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
-  }
+}
   
 .mercury:hover::before {
     transform: scale(3.1);
     box-shadow: 0 0 15px #888888;
-  }
+}
   
 .mercury:hover {
     color: #888888;
     box-shadow: 0 0 5px #888888;
     text-shadow: 0 0 5px #888888;
-  }
+}
 
  .venus {
     background-color: rgba(231, 205, 205, 1);
@@ -138,18 +140,18 @@ h2 {
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
-  }
+}
   
 .venus:hover::before {
     transform: scale(2.1);
     box-shadow: 0 0 15px #E7CDCD;
-  }
+}
   
 .venus:hover {
     color: #E7CDCD;
     box-shadow: 0 0 5px #E7CDCD;
     text-shadow: 0 0 5px #E7CDCD;
-  }
+}
 
 .earth {
     background-color: rgba(66, 142, 212, 1);
@@ -174,18 +176,18 @@ h2 {
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
-  }
+}
   
 .earth:hover::before {
     transform: scale(2.1);
     box-shadow: 0 0 15px #428ED4;
-  }
+}
   
 .earth:hover {
     color: #428ED4;
     box-shadow: 0 0 5px #428ED4;
     text-shadow: 0 0 5px #428ED4;
-  }
+}
 
 .mars {
     background-color: rgba(239, 95, 95, 1);
@@ -211,7 +213,7 @@ h2 {
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
-  }
+}
   
 .mars:hover::before {
     transform: scale(3.1);
@@ -409,6 +411,8 @@ h2 {
     text-shadow: 0 0 5px #7AD4F1;
 }
 
+/* Page two */
+
 .info-page {
     position: relative; 
     z-index: 1; 
@@ -416,7 +420,6 @@ h2 {
     flex-direction: column;
     display: block;
     max-width: 100rem;
-   
 }
 
 .background {
@@ -446,9 +449,7 @@ img {
     position: absolute;
     display: block;
     transition: .5s;
-    
 }
-
 
 .earth1::before {
     content: '';
@@ -555,6 +556,7 @@ img {
     align-content: center;
     justify-content: center;
 }
+
 h1 {
     color: rgba(255, 255, 255, 1);
     letter-spacing: 10px;
@@ -571,7 +573,6 @@ h2 {
     font-size: 1.5em; 
     font-weight: 200; 
     margin-top: 0%;
-    
 }
 
 article {
@@ -579,6 +580,7 @@ article {
     font-family: "Roboto Condensed";
     font-weight: 300;
 }
+
 hr {
     border: none; 
     height: 1px; 
@@ -586,15 +588,18 @@ hr {
     width: 100%; 
     margin: 1rem 0;
 }
+
 h3 {
     color: rgba(255, 255, 255, 0.884);
     font-family: 'Secular One';
     font-weight: 300; 
     font-size: 0.8em; 
 }
+
 .placing-div {
     flex-direction: column;
 }
+
 .planets-info {
     display: flex;
     padding-left: 5rem;
@@ -610,11 +615,12 @@ h4 {
     font-family: 'Secular One';
     font-weight: 300; 
     font-size: 0.8em; 
-    
 }
+
 p {
     color: rgba(255, 255, 255, 0.425);
 }
+
 .moon-div {
     justify-content: space-between;
     margin-left: 5rem;
